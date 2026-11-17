@@ -21,7 +21,7 @@
    ```
 3. Install dependencies:
    ```powershell
-   pip install langgraph langchain pydantic python-dotenv pytest langchain-openai
+   pip install langgraph langchain pydantic python-dotenv pytest langchain-openai gradio
    ```
 4. Configure your API key using the `.env` file:
    - A `.env` file is already provided in the project root.
@@ -34,7 +34,15 @@
 
 ## 🧠 Usage
 
-Run the main application:
+### Web UI (Recommended)
+Launch the interactive Gradio dashboard:
+```powershell
+python gradio_app.py
+```
+Open [http://127.0.0.1:7860](http://127.0.0.1:7860) in your browser. You can select sample tickets, view customer context, run the agent, inspect guardrail warnings, and approve/reject sensitive actions interactively.
+
+### Command Line Interface (CLI)
+Run the terminal application:
 ```powershell
 python app.py
 ```

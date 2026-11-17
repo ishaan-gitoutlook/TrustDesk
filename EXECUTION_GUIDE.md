@@ -41,7 +41,25 @@ Your terminal prompt will change to show `(.venv)`.
 
 ---
 
-## Step 3 — Run the Main App
+## Step 3 — Run the App
+
+### Option A: Launch the Gradio Web Interface (Recommended)
+
+```powershell
+python gradio_app.py
+```
+
+Then open your browser to **http://127.0.0.1:7860**.
+You will see an interactive dashboard allowing you to:
+- Choose from sample tickets (`T-1001`, `T-1002`, `T-1003`) or enter a custom ID.
+- Inspect ticket metadata in real-time.
+- Click **Resolve Ticket** to trigger the TrustDesk agent.
+- View guardrail checks and grounding warnings.
+- Interactively **Approve** or **Reject & Escalate** when sensitive actions are detected.
+
+---
+
+### Option B: Run in Terminal (CLI)
 
 ```powershell
 python app.py
@@ -86,7 +104,8 @@ pytest tests/
 
 | File | Purpose |
 |------|---------|
-| `app.py` | Main entry point |
+| `gradio_app.py` | Interactive Gradio Web UI |
+| `app.py` | CLI entry point |
 | `agent.py` | LangGraph agent logic |
 | `tools.py` | Ticket, KB, and escalation tools |
 | `guardrails.py` | Grounding & approval checks |
